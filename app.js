@@ -1,5 +1,5 @@
 // pascal case becos its a class Joi
-const Joi = require('joi');
+// const Joi = require('joi');
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
@@ -31,9 +31,6 @@ app.use(bodyParser.json({ type: 'application/json' }));
 app.use('/api/v1', router);
 
 
-
 const port = process.env.PORT || 3000;
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
-});
+app.listen(port, () => console.log(`Server listening on port ${port}`));
 module.exports = app;

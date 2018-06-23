@@ -4,8 +4,11 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www",
-    "test": "mocha"
+    "start": "node app.js",
+    "build-server": "babel app --presets babel-preset-env --out-dir app/dist",
+    "build-client": "",
+    "test": "mocha",
+    "pretest": "eslint --ignore-path .gitignore ."
   },
   "dependencies": {
     "babel-register": "^6.26.0",
@@ -20,12 +23,15 @@
     "morgan": "~1.9.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "chai": "^4.1.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-import": "^2.12.0",
+    "faker": "^4.1.0",
     "mocha": "^5.2.0",
-    "supertest": "^3.1.0",
-    "chai": "^4.1.2",
-    "faker": "^4.1.0"
+    "supertest": "^3.1.0"
   }
 }

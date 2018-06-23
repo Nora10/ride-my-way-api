@@ -14,12 +14,14 @@ module.exports = {
             "error",
             "never"
         ],
-        "no-unused-vars": [
-            "error",
-            {
-                "vars": "local",
-                "args": "none"
-            }
-        ]
+        'no-console': 'off',
+        'indent': 'off',
+        'linebreak-style': 'off',
+        'no-trailing-spaces': 'off',
+        'eol-last': 'off',
+        'key-spacing': 'off'
+    },
+    "globals": {
+        'console': true
     }
 };
