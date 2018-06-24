@@ -4,7 +4,7 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node app.babel.js",
     "build-server": "babel app --presets babel-preset-env --out-dir app/dist",
     "build-client": "",
     "test": "mocha",
