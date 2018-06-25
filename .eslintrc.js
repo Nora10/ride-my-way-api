@@ -19,7 +19,8 @@ module.exports = {
         'linebreak-style': 'off',
         'no-trailing-spaces': 'off',
         'eol-last': 'off',
-        'key-spacing': 'off'
+        'key-spacing': 'off',
+        'no-unused-vars': 'off'
     },
     "globals": {
         'console': true

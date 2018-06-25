@@ -2,13 +2,15 @@
   "name": "empty",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
+  "main": "app.babel.js",
   "scripts": {
-    "start": "node app.babel.js",
+    "start": "node app.js",
     "build-server": "babel app --presets babel-preset-env --out-dir app/dist",
     "build-client": "",
     "test": "mocha",
-    "pretest": "eslint --ignore-path .gitignore ."
+    "pretest": "eslint --ignore-path .gitignore .",
+    "report-coverage": "nyc report --reporter=lcov > coverage.lcov && codecov",
+    "standard": "standard index.js"
   },
   "dependencies": {
     "babel-register": "^6.26.0",
@@ -32,6 +34,17 @@
     "eslint-plugin-import": "^2.12.0",
     "faker": "^4.1.0",
     "mocha": "^5.2.0",
-    "supertest": "^3.1.0"
+    "supertest": "^3.1.0",
+    "ava": "^0.16.0",
+    "co-exec": "^1.0",
+    "codecov": "^1.0.1",
+    "ghooks": "^1.2.4",
+    "nyc": "^10.0.0",
+    "standard": "^8.4.0"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run standard"
+    }
   }
 }

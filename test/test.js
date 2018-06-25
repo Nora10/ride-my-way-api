@@ -1,18 +1,18 @@
-process.env.NODE_ENV = 'test';
-
 const chai = require('chai');
+
 const chaiHttp = require('chai-http');
+
 const app = require('../app');
 
-// const should = chai.should();
+const should = chai.should();
 
 chai.use(chaiHttp);
 
 describe('Task API Routes', () => {
   // This function will run before every test to clear database
-  beforeEach(() => {
+  // beforeEach(() => {
 
-  });
+  // });
 
   describe('Rides', () => {
     describe('/GET rides', () => {
