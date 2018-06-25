@@ -44,7 +44,7 @@ module.exports = {
 
     const index = utils.rides.indexOf(ride);
     utils.rides.splice(index, 1);
-    return res.json({ message: 'Book successfully deleted!', rides: utils.rides });
+    return res.json({ message: 'ride successfully deleted!', rides: utils.rides });
   },
   updating_ride_offers: (req, res) => {
     const newLocal = parseInt(req.params.rideid, 10);
