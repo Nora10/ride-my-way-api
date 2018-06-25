@@ -2,7 +2,7 @@
   "name": "empty",
   "version": "0.0.0",
   "private": true,
-  "main": "app.babel.js",
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "build-server": "babel app --presets babel-preset-env --out-dir app/dist",

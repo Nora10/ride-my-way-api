@@ -8,7 +8,6 @@ const should = chai.should();
 
 chai.use(chaiHttp);
 
-<<<<<<< HEAD
 describe('Rides', () => {
   describe('/GET rides', () => {
     it('it should GET all the rides offered', (done) => {
@@ -22,15 +21,15 @@ describe('Rides', () => {
   });
   describe('/POST rides', () => {
     it('it should not POST a ride without all  fields filled', (done) => {
-      let ride = {
-        name: "The Lord of the Rings",
-        departure: "Benin",
+      const ride = {
+        name: 'The Lord of the Rings',
+        departure: 'Benin',
         arrival: 'Plateau',
-        amount: "N5,000",
+        amount: 'N5,000',
         available_Seats: 1,
         date: '05-05-2018',
         time: '11:00 am'
-      }
+      };
       chai.request(app)
         .post('/api/v1/rides')
         .send(ride)
@@ -40,11 +39,9 @@ describe('Rides', () => {
           done();
         });
     });
-
-  }
-  )
+  });
 });
-=======
+
 describe('Task API Routes', () => {
   // This function will run before every test to clear database
   // beforeEach(() => {
@@ -179,4 +176,3 @@ describe('Task API Routes', () => {
     });
   });
 });
->>>>>>> bf2fc3b4ac549936c41743e300b6868371bb600d
