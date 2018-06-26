@@ -1,8 +1,11 @@
-const express = require('express');
+import express from 'express';
+// const express = require('express');
 
 const router = express.Router();
 // const path = require('path');
-const checkController = require('../app/controllers/rides');
+
+import * as checkController from '../app/controllers/rides';
+// const checkController = require('../app/controllers/rides');
 
 // GET users listing
 router.get('/rides', checkController.getspecific_ride_offers);
@@ -34,4 +37,4 @@ router.delete('/rides/:rideid', checkController.deleting_ride_offers);
 */
 router.put('/rides/:rideid', checkController.updating_ride_offers);
 
-module.exports = router;
+export default router;

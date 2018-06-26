@@ -1,19 +1,16 @@
-const chai = require('chai');
+import chai from 'chai';
+// const chai = require('chai');
 
-const chaiHttp = require('chai-http');
+import chaiHttp from 'chai-http';
+// const chaiHttp = require('chai-http');
 
-const app = require('../app');
+import app from '../app';
 
 const should = chai.should();
 
 chai.use(chaiHttp);
 
 describe('Task API Routes', () => {
-  // This function will run before every test to clear database
-  // beforeEach(() => {
-
-  // });
-
   describe('Rides', () => {
     describe('/GET rides', () => {
       it('it should GET all the rides offered', (done) => {
