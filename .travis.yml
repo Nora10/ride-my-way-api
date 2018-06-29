@@ -1,0 +1,9 @@
+language: node_js
+node_js:
+  - stable
+after_script:
+  - npm run coverage
+- ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+
+before_script:
+  -npm install -g nyc
